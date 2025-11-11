@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | Chatloop</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <script
+    src="https://kit.fontawesome.com/9e5ba2e3f5.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/Telegram_logo.svg.png" />
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #007bff, #6610f2);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+
+    .login-card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .login-card img {
+      width: 60px;
+      height: 60px; 
+    }
+    
+
+    .login-card .form-control {
+      border-radius: 0.5rem;
+    }
+
+    .btn-primary {
+      border-radius: 0.5rem;
+    }
+
+    .small-link {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .small-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-card">
+    <div class="mb-3">
+      <img src="img/Telegram_logo.svg.png" alt="Chatloop Logo" />
+    </div>
+    <h3 class="fw-bold text-primary mb-4">
+      <i class="fas fa-user-shield me-2"></i> Admin Login
+    </h3>
+
+    <form id="adminLoginForm">
+      <div class="mb-3 text-start">
+        <label for="adminEmail" class="form-label">Email Address</label>
+        <input
+          type="email"
+          id="adminEmail"
+          class="form-control"
+          placeholder="admin@chatloop.com"
+          required
+        />
+      </div>
+
+      <div class="mb-3 text-start">
+        <label for="adminPassword" class="form-label">Password</label>
+        <input
+          type="password"
+          id="adminPassword"
+          class="form-control"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="rememberMe"
+          />
+          <label class="form-check-label small" for="rememberMe">
+            Remember me
+          </label>
+        </div>
+        <a href="#" class="small-link small">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">
+        <i class="fas fa-sign-in-alt me-2"></i> Login
+      </button>
+    </form>
+
+    <p class="mt-4 small text-muted mb-0">
+      © 2025 Chatloop Admin Panel. All rights reserved.
+    </p>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Login Logic -->
+  <script>
+    document
+      .getElementById("adminLoginForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("adminEmail").value;
+        const password = document.getElementById("adminPassword").value;
+
+        // Demo login validation
+        if (email === "admin@chatloop.com" && password === "admin123") {
+          alert("Login successful!");
+          window.location.href = "admin-dashboard.html";
+        } else {
+          alert("Invalid email or password!");
+        }
+      });
+  </script>
+</body>
+</html>

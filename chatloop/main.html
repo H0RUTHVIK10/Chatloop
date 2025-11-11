@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Chatloop</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- Font Awesome -->
+  <script
+    src="https://kit.fontawesome.com/9e5ba2e3f5.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/Telegram_logo.svg.png" />
+</head>
+
+<body class="vh-100 overflow-hidden">
+  <main class="d-flex flex-column h-100">
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm app-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="img/Telegram_logo.svg.png"
+            alt="Chatloop Logo"
+            class="me-2"
+            style="width: 30px; height: 30px;"
+          />
+          <span class="h5 mb-0">Chatloop</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <i class="fas fa-comment-dots me-1"></i> Chats
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="setting.html"><i class="fas fa-cog me-1"></i> Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"><i class="fas fa-users me-1"></i> Contact us </a>
+            </li>
+          </ul>
+          <div class="nav-actions ms-3">
+            <a href="profile.html" class="text-white">
+              <i class="fas fa-user-circle fa-2x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Chat Layout -->
+    <div class="d-flex flex-grow-1 overflow-hidden">
+      <!-- Sidebar -->
+      <aside class="col-md-4 col-lg-3 border-end p-0 chat-sidebar d-flex flex-column h-100">
+        <!-- Sidebar Header -->
+        <div class="header-container p-2 border-bottom">
+          <div class="header d-flex align-items-center justify-content-between">
+            <div class="toggle-button me-2">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="input-group search-box flex-grow-1">
+              <span class="input-group-text"><i class="fas fa-search"></i></span>
+              <input type="text" class="form-control" placeholder="Search" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat List -->
+        <div class="body-container overflow-auto flex-grow-1">
+          <div class="chat-list list-group list-group-flush">
+            <div class="chat-box list-group-item list-group-item-action active bg-light d-flex align-items-center py-2 px-3">
+              <div class="chat-img me-3">
+                <img
+                  src="img/profile-1.png"
+                  alt="Profile of Alex Smith"
+                  class="rounded-circle"
+                  style="width: 50px; height: 50px;"
+                />
+              </div>
+              <div class="chat-details w-100">
+                <div class="chat-title d-flex justify-content-between">
+                  <h3 class="h6 mb-0">Alex Smith</h3>
+                  <small>06:04 PM</small>
+                </div>
+                <div class="chat-msg d-flex justify-content-between align-items-center">
+                  <p class="text-truncate mb-0 small">
+                    How to make website using HTML and CSS?
+                  </p>
+                  <span class="badge bg-primary rounded-pill">1</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-box list-group-item list-group-item-action d-flex align-items-center py-2 px-3">
+              <div class="chat-img me-3">
+                <img
+                  src="img/profile-2.png"
+                  alt="Profile of Dania"
+                  class="rounded-circle"
+                  style="width: 50px; height: 50px;"
+                />
+              </div>
+              <div class="chat-details w-100">
+                <div class="chat-title d-flex justify-content-between">
+                  <h3 class="h6 mb-0">Dania</h3>
+                  <small class="text-muted">Dec 07</small>
+                </div>
+                <div class="chat-msg">
+                  <p class="text-truncate mb-0 small text-muted">See you</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Files Section -->
+          <div class="files p-3 border-top d-none" id="files">
+            <ul class="nav nav-pills nav-fill mb-3">
+              <li class="nav-item"><a class="nav-link active" href="#">Chats</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Links</a></li>
+            </ul>
+            <ul class="list-unstyled profiles">
+              <li class="d-flex align-items-center mb-2">
+                <img
+                  src="img/profile-1.png"
+                  alt="Alex Smith profile"
+                  class="rounded-circle me-3"
+                  style="width: 40px; height: 40px;"
+                />
+                <h4 class="h6 mb-0">Alex Smith</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Floating Pen Button -->
+        <div class="pen position-absolute bottom-0 end-0 m-3">
+          <button
+            class="btn btn-success rounded-circle shadow-lg"
+            style="width: 56px; height: 56px;"
+          >
+            <i class="fas fa-pen fs-5"></i>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Chat Section -->
+      <section class="col-md-8 col-lg-9 d-flex flex-column content h-100 bg-light">
+        <div class="container-fluid p-0 d-flex flex-column h-100" id="chatBox">
+          <!-- Chat Header -->
+          <div class="content-header d-flex align-items-center p-3 bg-white border-bottom shadow-sm">
+            <div class="image me-3">
+              <img
+                src="img/profile-1.png"
+                alt="Profile of Alex Smith"
+                class="rounded-circle"
+                style="width: 50px; height: 50px;"
+              />
+            </div>
+            <div class="details me-auto">
+              <h3 class="h5 mb-0">Alex Smith</h3>
+              <span class="text-muted small">Last seen 10 minutes ago</span>
+            </div>
+            <div class="icons d-flex gap-3 fs-5 text-secondary">
+              <i class="fas fa-phone-alt"></i>
+              <i class="fas fa-search"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+
+          <!-- Chat Messages -->
+          <div class="chat-container p-4 overflow-auto flex-grow-1 d-flex flex-column-reverse">
+            <div
+              class="chat-msg received p-3 mb-2 rounded shadow-sm bg-white align-self-start"
+              style="max-width: 65%;"
+            >
+              <p class="mb-1">How to make website using HTML and CSS?</p>
+              <span class="time small text-muted d-block text-end">06:04 PM</span>
+            </div>
+          </div>
+
+          <!-- Message Input Box -->
+          <div class="message-box p-3 bg-white border-top">
+            <div class="input-group">
+              <span class="input-group-text btn btn-light border-0">
+                <i class="far fa-smile fs-5"></i>
+              </span>
+              <input type="text" class="form-control" placeholder="Message" />
+              <span class="input-group-text btn btn-light border-0">
+                <i class="fas fa-paperclip fs-5"></i>
+              </span>
+              <button
+                class="btn btn-primary micro ms-2 rounded-circle"
+                type="button"
+                style="width: 40px; height: 40px; padding: 0;"
+              >
+                <i class="fas fa-microphone"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - CHATLOOP</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Ensures main content area fills available space below the navbar */
+        .main-content-area {
+            min-height: calc(100vh - 56px); 
+        }
+        /* Style for the settings pane, typically centered and contained */
+        .settings-card {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="main.html">
+                <img src="img/Telegram_logo.svg.png" alt="Chatloop Logo" class="me-2" style="width: 30px; height: 30px;">
+                <span class="h5 mb-0">Chatloop</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html"><i class="fas fa-comment-dots me-1"></i> Chats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-users me-1"></i> Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="settings.html"><i class="fas fa-cog me-1"></i> Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-phone-alt me-1"></i> Calls</a>
+                    </li>
+                </ul>
+                <div class="nav-actions ms-3">
+                     <a href="profile.html" class="text-white">
+              <i class="fas fa-user-circle fa-2x"></i>
+            </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5 main-content-area">
+        <div class="settings-card card shadow-lg">
+            <div class="card-header bg-white text-center p-3">
+                <h1 class="h3 mb-0 text-primary"><i class="fas fa-cog me-2"></i> User Settings</h1>
+            </div>
+            <div class="card-body p-0">
+                
+                <div class="row g-0">
+                    <div class="col-md-3 border-end">
+                        <div class="nav flex-column nav-pills p-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link text-start active" id="v-pills-account-tab" data-bs-toggle="pill" data-bs-target="#v-pills-account" type="button" role="tab" aria-controls="v-pills-account" aria-selected="true">
+                                <i class="fas fa-user-circle fa-fw me-2"></i> Account
+                            </button>
+                            <button class="nav-link text-start" id="v-pills-notifications-tab" data-bs-toggle="pill" data-bs-target="#v-pills-notifications" type="button" role="tab" aria-controls="v-pills-notifications" aria-selected="false">
+                                <i class="fas fa-bell fa-fw me-2"></i> Notifications
+                            </button>
+                            <button class="nav-link text-start" id="v-pills-appearance-tab" data-bs-toggle="pill" data-bs-target="#v-pills-appearance" type="button" role="tab" aria-controls="v-pills-appearance" aria-selected="false">
+                                <i class="fas fa-palette fa-fw me-2"></i> Appearance
+                            </button>
+                            <button class="nav-link text-start" id="v-pills-privacy-tab" data-bs-toggle="pill" data-bs-target="#v-pills-privacy" type="button" role="tab" aria-controls="v-pills-privacy" aria-selected="false">
+                                <i class="fas fa-lock fa-fw me-2"></i> Privacy & Security
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="tab-content p-4" id="v-pills-tabContent">
+                            
+                            <div class="tab-pane fade show active" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab">
+                                <h4 class="mb-3 text-secondary">Profile Details</h4>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="inputUsername" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="inputUsername" value="alex smith">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="inputEmail" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail" value="alex.smith@chat.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="inputBio" class="form-label">Bio / Status</label>
+                                        <textarea class="form-control" id="inputBio" rows="3">How to make website using html and css?</textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary"><i class="fas fa-save me-2"></i> Save Changes</button>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel" aria-labelledby="v-pills-notifications-tab">
+                                <h4 class="mb-3 text-secondary">Notification Preferences</h4>
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" id="notificationToggle" checked>
+                                    <label class="form-check-label" for="notificationToggle">Enable Push Notifications</label>
+                                </div>
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" id="soundToggle" checked>
+                                    <label class="form-check-label" for="soundToggle">Play sound for new messages</label>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="alertVolume" class="form-label">Alert Volume</label>
+                                    <input type="range" class="form-range" id="alertVolume">
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-appearance" role="tabpanel" aria-labelledby="v-pills-appearance-tab">
+                                <h4 class="mb-3 text-secondary">Theme and Display</h4>
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Color Theme</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="colorTheme" id="themeLight" checked>
+                                        <label class="form-check-label" for="themeLight"><i class="fas fa-sun me-1"></i> Light</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="colorTheme" id="themeDark">
+                                        <label class="form-check-label" for="themeDark"><i class="fas fa-moon me-1"></i> Dark</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Chat Background</label>
+                                    <select class="form-select">
+                                        <option selected>Default Pattern</option>
+                                        <option>Solid Blue</option>
+                                        <option>Custom Image</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-privacy" role="tabpanel" aria-labelledby="v-pills-privacy-tab">
+                                <h4 class="mb-3 text-secondary">Security Controls</h4>
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" id="twoFactorToggle">
+                                    <label class="form-check-label" for="twoFactorToggle">Enable Two-Factor Authentication</label>
+                                </div>
+                                <button class="btn btn-warning mb-3"><i class="fas fa-key me-2"></i> Change Password</button>
+                                <button class="btn btn-danger"><i class="fas fa-trash-alt me-2"></i> Delete Account</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
